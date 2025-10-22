@@ -1,20 +1,20 @@
-//rafce dá o pedaço pronto
+// rafce
 import React from 'react'
 
-const Pedido = () => {
+const Pedido = ({data, icone, categoriaIcone, titulo, descricao}) => {
+  // const data = props.data
+  // const icone = props.icone
+  // const { data, icone } = props
   return (
-    // colar a div pedido aqui 
-    <div className="pedido border rounded p-3 mb-3">
-      <div className="d-flex align-items-center">
-        <div className="p-2">
-          <i className="fa-solid fa-hdd fa-3x text-info"></i>
+      <div className="d-flex">
+        <div className="d-flex align-items-center">
+          <i className={`fa-${categoriaIcone} fa-${icone} fa-2x`}></i>
         </div>
-        <div className="flex-grow-1 p-2">
-          <h5 className="text-secondary mb-1">SSD</h5>
-          <p className="text-muted mb-0">SSD Kingston A400 - SATA</p>
+        <div className="flex-grow-1 border rounded pt-3">
+          <h4 className="text-center">{titulo}</h4>
+          <p className="text-center">{descricao}</p>
         </div>
       </div>
-    </div>
   )
 }
 
